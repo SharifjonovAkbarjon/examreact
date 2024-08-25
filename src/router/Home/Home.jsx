@@ -15,13 +15,13 @@ const Home = () => {
     const {data, loading} = useFetch("/products", {limit:10})
     return (
         <>
-            {/* <Hero/> */}
-            {/* <Featured/> */}
+            <Hero/>
+            <Featured/>
             <Category/>
             {loading && <Skeleton/>}
             <Products title={"New Product"} data={data?.products}/>
-            {/* <Stay/>             */}
-            {/* <Collection/> */}
+            <Stay/>            
+            <Collection/>
         </>
     )
 }
