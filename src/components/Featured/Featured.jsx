@@ -119,8 +119,8 @@ const product = [
 
 
 const bobur = product?.map((element) => (
-    <div key={element.id} className="wrapper" style={{ backgroundImage: `url(${element.url})` }}>
-        <div className='flex flex-col items-start gap-[57px]'>
+    <div key={element.id} className="wrapper " style={{ backgroundImage: `url(${element.url})` }}>
+        <div className='wraper_cart flex flex-col items-start gap-[57px]'>
             <p className='text'>{element.title}</p>
             <button>Shop Now</button>
         </div>
@@ -133,7 +133,7 @@ const Featured = () => {
     return (
         <>
             <div className='Featured container'>
-                <div className="Featured__body">
+                <div className="Featured__body ">
                     <div>
                         <div className='head'>
                             <h3>Featured Categories</h3>
@@ -144,14 +144,15 @@ const Featured = () => {
                                 <li>Vegetables</li>
                             </ul>
                         </div>
-                        <div className='feautr justify-between'>{laylo}</div>
+                        <div className='feautr flex justify-between overflow-x-auto gap-x-3 2xl:overflow-x-hidden 2xl:gap-x-0 mb-11'>{laylo}</div>
                     </div>
-                    <div className='wrappers'>
-                        <div className='flex justify-between'>{bobur}</div>
+                    <div className='wrapper_paer flex w-[100%]'>
+                        <div className='flex justify-between w-[95%]'>{bobur}</div>
                     </div>
                 </div>
             </div>
         </>
+
     )
 }
 

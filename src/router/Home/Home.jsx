@@ -19,7 +19,7 @@ const Home = () => {
             <Featured/>
             <Category/>
             {loading && <Skeleton/>}
-            <Products title={"New Product"} data={data?.products}/>
+            <Products  data={data?.products}/>
             <Stay/>            
             <Collection/>
         </>

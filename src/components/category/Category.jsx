@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const Category = () => {
+const Category = ({setCategory, data}) => {
+
+
   return (
-    <div>Category</div>
+    <>
+      <div className="container">
+   
+      </div>
+    </>
   )
 }
 
-export default Category
+export default memo(Category)
