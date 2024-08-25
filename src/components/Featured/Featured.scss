@@ -1,0 +1,99 @@
+.Featured__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 90px 0 25px;
+    gap: 40px;
+
+    .head {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        h3 {
+            font-family: Quicksand;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 38.4px;
+            color: rgba(37, 61, 78, 1);
+        }
+
+        ul {
+            display: flex;
+            gap: 27px;
+
+            li {
+                font-family: Quicksand;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                text-align: left;
+                color: rgba(37, 61, 78, 1);
+                transition: .7s;
+
+                &:hover {
+                    cursor: pointer;
+                    color: rgba(59, 183, 126, 1);
+                }
+            }
+        }
+    }
+
+    .feautr {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            align-items: center;
+            padding: 21px 25px;
+            border-radius: 10px;
+
+            &:hover {
+                cursor: pointer;
+
+                img {
+                    transform: scale(1.2);
+                }
+            }
+
+            .text {
+                font-family: Quicksand;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 19.2px;
+                text-align: center;
+                color: Copy rgba(37, 61, 78, 1);
+            }
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        width: 502px;
+        height: 300px;
+        padding: 50px;
+        align-items: center;
+        border-radius: 10px;
+
+        p {
+            font-family: Quicksand;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28.8px;
+            color: rgba(37, 61, 78, 1);
+            width: 60%;
+        }
+
+        button{
+            padding: 8px 28px 8px 13px;
+            background: rgba(59, 183, 126, 1);
+            border-radius: 4px;
+            color: white;
+        }
+    }
+}

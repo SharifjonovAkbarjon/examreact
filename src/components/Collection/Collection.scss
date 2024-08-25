@@ -1,0 +1,43 @@
+.collection_body {
+    display: flex;
+    width: 100%;
+    margin: 40px 0 65px;
+
+    .wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .card {
+            width: 19%;
+            display: flex;
+            background: rgba(244, 246, 250, 1);
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            border-radius: 10px;
+
+            .div {
+
+                .tex {
+                    font-family: Quicksand;
+                    font-size: 18px;
+                    font-weight: 600;   
+                    line-height: 21.6px;
+                    color: rgba(36, 36, 36, 1);
+                }
+
+                .parag {
+                    font-family: Lato;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                    color: rgba(173, 173, 173, 1);
+                }
+            }
+
+        }
+    }
+}

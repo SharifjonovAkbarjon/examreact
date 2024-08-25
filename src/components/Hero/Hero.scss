@@ -1,0 +1,60 @@
+.hero__body {
+    width: 100%;
+    background: url(../../assets/hero.png);
+    height: 540px;
+    object-fit: cover;
+    border-radius: 30px;
+    padding: 91px 95px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+
+    .heros {
+        display: flex;
+        width: 40%;
+
+        h2 {
+            font-family: Quicksand;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 72px;
+            text-align: left;
+            color: rgba(37, 61, 78, 1);
+        }
+    }
+
+    .paragraph {
+        display: flex;
+        width: 40%;
+
+        p {
+            font-family: Lato;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: rgba(126, 126, 126, 1);
+            margin-bottom: 30px;
+        }
+    }
+    .email{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 30%;
+        padding-left: 32px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 50px;
+
+        input{
+            outline: none;
+        }
+
+        button{
+            padding: 22px 40px;
+            background: rgba(59, 183, 126, 1);
+            border-radius: 50px;
+            color: white;
+        }
+    }
+}

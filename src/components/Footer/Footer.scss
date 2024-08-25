@@ -1,0 +1,164 @@
+.footer__body {
+    display: flex;
+    flex-direction: column;
+    margin: 65px 0 100px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+            width: 30%;
+            gap: 12px;
+
+            .logo_part {
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+
+                .logos {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 22px;
+                    width: 60%;
+
+                    p {
+                        font-family: Lato;
+                        font-size: 17px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        text-align: left;
+                        color: rgba(37, 61, 78, 1);
+                    }
+
+                    img {
+                        display: flex;
+                        width: 55%;
+                    }
+                }
+
+                .icons {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    .iconka {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+            }
+
+            .text_part {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                p {
+                    font-family: Lato;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                    color: rgba(126, 126, 126, 1);
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 13px;
+                    font-family: Lato;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                    color: rgba(37, 61, 78, 1);
+                }
+            }
+        }
+
+        .ul_part {
+            display: flex;
+            gap: 100px;
+
+            .middle {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                b {
+                    font-family: Quicksand;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 28.8px;
+                    text-align: left;
+                    color: rgba(37, 61, 78, 1);
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 13px;
+                    font-family: Lato;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                    color: rgba(37, 61, 78, 1);
+                }
+            }
+        }
+
+        .install {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+
+            .first {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                div {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                span {
+                    font-family: Quicksand;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 28.8px;
+                    text-align: left;
+                    color: rgba(37, 61, 78, 1);
+                }
+
+                p {
+                    font-family: Lato;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                    color: rgba(37, 61, 78, 1);
+
+                }
+            }
+
+            .second {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    font-family: Lato;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                    color: rgba(37, 61, 78, 1);
+                }
+            }
+        }
+    }
+}
