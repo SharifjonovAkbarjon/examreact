@@ -27,7 +27,7 @@ const Header = () => {
                                 <option className='border-none' value="">All Categories</option>
                             </select>
                         </div>
-                        <div className='flex items-center w-[70%]'>
+                        <div className='input_part flex items-center w-[70%]'>
                             <input className='w-[100%] outline-none ' type="text" placeholder='Search for items...' />
                             <CiSearch className='text-[rgb(131,131,131)] w-[50px]' />
                         </div>
@@ -47,8 +47,8 @@ const Header = () => {
                     </div>
                     <div className='icons'>
                         <div className='icon'>
-                            <FaRegHeart className='h-' />
-                            <NavLink to={"/Wishlist"}>Wishlist <sup>{wishlist.length}</sup></NavLink>
+                            <FaRegHeart className='' />
+                            <NavLink to={"/Wishlist"}>Wishlist <sup className='bg-[rgb(59,183,126)] text-white px-[6px] py-[1px] rounded-[50%]'>{wishlist.length}</sup></NavLink>
                         </div>
                         <div className='icon'>
                             <BsCart3 />

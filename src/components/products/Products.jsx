@@ -19,11 +19,11 @@ const Products = ({ data, title }) => {
         }
       </button>
       <div className="w-full h-[264px] ">
-        <NavLink to={"/Detail/${product.id}`"}>
+        <NavLink to={`/Detail/${product.id}`}>
           <img className="w-full h-full object-contain" src={product.images[0]} alt="Photo" />
         </NavLink>
-        
       </div>
+
       <span>{product.category}</span>
       <p className="title">{product.title}</p>
       <div className="star">
@@ -32,7 +32,7 @@ const Products = ({ data, title }) => {
       </div>
       <p className="brand">By <span>{product.brand}</span></p>
       <strong>$ {product.price}</strong>
-      
+
     </div>
   ));
   return (
