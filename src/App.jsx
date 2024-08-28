@@ -12,7 +12,7 @@ import Wishlist from './router/wishlist/Wishlist'
 import Cart from './router/cart/Cart'
 import Detail from './components/detail/Detail'
 import Products from './components/products/Products'
-import Layout from './components/layout/Layout'
+import Auth from './components/auth/Auth'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,15 +20,17 @@ function App() {
   return (
     <>
       <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/laylo" element={<About />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/detail/:id" element={<Detail />} />
-          <Route path="/" element={<Products title="Products" />} />
-        </Routes>
+      <Routes>
+        <Route path="/laylo" element={<About />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/" element={<Products title="Products" />} />
+        <Route path="/" element={<Auth />}>
+          <Route path="" element={<Home />} />
+        </Route>
+      </Routes>
       <Footer />
     </>
   )

@@ -1,39 +1,96 @@
-import React from 'react'
-import logo from '../../assets/logo.png'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Button, Checkbox, Form, Input } from 'antd';
+import axios from '../../api/index';
+import { useNavigate } from 'react-router-dom';
+import { useStateValue } from '../../context/index'
 
 const Admin = () => {
-  return (
-    <>
-      <div className="container flex flex-col items-center gap-2">
-        <div>
-          <NavLink to={"/"}>Home</NavLink>
-        </div>
-        <div className='flex gap-4 flex-col rounded-[5px] itemsjustify-center border py-[20px] px-[31px]'>
-          <div>
-            <img src={logo} alt="" />
-          </div>
-          <div className='flex flex-col gap-3'>
-            <p className='text-[15px]'>Email Address</p>
-            <input className='w-[100%] py-2 px-[10px] rounded-[1px] border outline-black' type="text" placeholder='Enter Your Email' />
-          </div>
-          <div className='flex flex-col gap-3'>
-            <p className='text-[15px]'>Password*</p>
-            <input className='w-[100%] py-2 px-[10px] rounded-[1px] border' type="text" placeholder='Enter Your password' />
-          </div>
-          <div className='flex gap-3'>
-            <input type="checkbox" />
-            <p>Remember Me</p>
-            <p className='ml-6'>Forgot Password?</p>
-          </div>
-          <div className='flex justify-between'>
-            <button className='bg-[green] py-[10px] px-[20px] rounded-lg text-white'>Login</button>
-            <button>Signup?</button>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
+  const navigate = useNavigate()
+  const [state, dispatch] = useStateValue()
+  const onFinish = (values) => {
+    axios
+      .post("/auth/login", values)
+      .then(res => {
+        dispatch({type: "LOGIN", payload: res.data.token})
+        navigate("/")
+        console.log(res)
+      })
+      .catch(err => console.log(err))
+  };
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+  };
 
-export default Admin
+  return (
+    <div className=''>
+      <Form
+        name="basic"
+        labelCol={{
+          span: 8,
+        }}
+        wrapperCol={{
+          span: 16,
+        }}
+        style={{
+          maxWidth: 600,
+        }}
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        autoComplete="off"
+      >
+        <Form.Item
+          label="Username"
+          name="username"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your username!',
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Password"
+          name="password"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your password!',
+            },
+          ]}
+        >
+          <Input.Password />
+        </Form.Item>
+
+        <Form.Item
+          name="remember"
+          valuePropName="checked"
+          wrapperCol={{
+            offset: 8,
+            span: 16,
+          }}
+        >
+          <Checkbox>Remember me</Checkbox>
+        </Form.Item>
+
+        <Form.Item
+          wrapperCol={{
+            offset: 8,
+            span: 16,
+          }}
+        >
+          <Button type="primary" htmlType="submit">
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>
+    </div>
+
+  );
+}
+export default Admin;

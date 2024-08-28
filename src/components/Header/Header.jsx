@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import "./Header.scss"
 import { CiSearch } from "react-icons/ci";
@@ -12,6 +12,8 @@ import { useStateValue } from '../../context';
 
 
 const Header = () => {
+
+
     const navigate = useNavigate()
     const [{ wishlist }, dispatch] = useStateValue()
     return (

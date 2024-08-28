@@ -4,6 +4,8 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import './product.scss'
 import { NavLink } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
+
 
 
 const Products = ({ data, title }) => {
@@ -31,7 +33,12 @@ const Products = ({ data, title }) => {
         <p className="paragraph">({product.rating})</p>
       </div>
       <p className="brand">By <span>{product.brand}</span></p>
-      <strong>$ {product.price}</strong>
+      <div className="flex items-center gap-5">
+        <strong>$ {product.price}</strong>
+        <button onClick={() => dispatch({ type: "INC_CART", payload: product })}>
+          <FaShoppingCart />
+        </button>
+      </div>
 
     </div>
   ));
