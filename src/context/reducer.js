@@ -36,10 +36,6 @@ export const reducer = (state, action) => {
             return state
         case "RESET_CART":
             return { ...state, cart: [] }
-        case "SET_LOGIN" :
-            return {...state, token: action.payload}
-        case "LOGOUT":
-            return {...state, token: null}
 
         default:
             return state;

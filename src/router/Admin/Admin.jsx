@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import axios from '../../api/index';
 import { useNavigate } from 'react-router-dom';
-import { useStateValue } from '../../context/index'
 
 const Admin = () => {
   const navigate = useNavigate()
-  const [state, dispatch] = useStateValue()
   const onFinish = (values) => {
     axios
       .post("/auth/login", values)
       .then(res => {
-        dispatch({type: "LOGIN", payload: res.data.token})
         navigate("/")
         console.log(res)
       })
